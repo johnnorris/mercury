@@ -1,0 +1,66 @@
+.logo {
+    display: table;
+    font-size: 26px;
+
+    padding-top: 18px; // to accomdate the icon
+    padding-left: 18px; // to accomdate the icon
+
+    &-text {
+        float: right;
+        position: relative;
+        margin-top: 10px;
+        margin-left: 10px;
+        z-index: 1;
+
+        font-weight: 700;
+        font-family: 'Balthazar', serif;
+        color: $black;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+
+    &-icon {
+        zoom: 0.75;
+
+        float: left;
+        display: block;
+        position: relative;
+
+        width: 10px;
+        height: 10px;
+
+        border: solid 3px $black;
+        border-radius: 100%;
+
+        background-color: $orange;
+
+        box-shadow:
+            0 0 0 5px $orange-bg,
+            0 0 0 8px $black,
+            0 0 0 13px $orange-bg,
+            0 0 0 16px $black,
+            0 0 0 21px $orange-bg,
+            0 0 0 24px $black
+        ;
+
+        &::before, &::after {
+            content: '';
+            position: absolute;
+
+            width: 50px;
+            height: 50px;
+
+            background-color: $orange-bg;
+        }
+
+        &::before {
+            top: -52px;
+            left: -52px;
+        }
+
+        &::after {
+            top: 12px;
+            left: 12px;
+        }
+    }
+}
