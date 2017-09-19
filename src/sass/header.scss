@@ -22,6 +22,7 @@ header {
             position: absolute;
             top: 100px; // arbitrary
             right: 0;
+            z-index: 1;
 
             width: 100%;
             max-width: 320px;
@@ -33,6 +34,9 @@ header {
             a {
                 display: block;
                 padding: $gutter * 2;
+
+                border-width: 0 0 1px;
+                border-color: $purple-light;
 
                 color: $white;
                 background-color: $black;

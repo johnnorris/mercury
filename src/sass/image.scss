@@ -1,0 +1,12 @@
+.img {
+    padding-bottom: 56.25%;
+    background-image: url('../img/alarm.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .info & {
+        height: 150px;
+        padding-bottom: 0;
+    }
+}

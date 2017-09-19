@@ -8,6 +8,7 @@
     {% block redirect %}{% endblock %}
     <meta name="description" content="{% block description %}{% endblock %}">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/jquery.js"></script>
 </head>
 <body>
 
@@ -42,15 +43,15 @@
 
     <footer class="small">
 
-        <span class="copy">Copyright &copy; 2017 Mercury Safety &amp; Security - <a href="privacy.html">Privacy Policy</a></span>
-        
+        <div class="quality">
+            Quality Assurance Guaranteed on&nbsp;all&nbsp;our&nbsp;products&nbsp;and&nbsp;services
+        </div>
+
+        <span class="copy">Copyright &copy; 2017 Mercury Safety &amp; Security - <a href="privacy.html">Privacy&nbsp;Policy</a></span>
+
     </footer>
 
-    <script>
-        document.querySelector('.nav-trigger').addEventListener('click', function(event) {
-            document.querySelector('header nav').classList.toggle('show');
-        });
-    </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

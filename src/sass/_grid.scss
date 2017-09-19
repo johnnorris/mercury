@@ -1,0 +1,19 @@
+.grid .grid { margin:  0 -$gutter; }
+.col { padding: 0  $gutter; }
+
+.grid:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.col {
+    float: left;
+    width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .one-of-two {
+        width: 50%;
+    }
+}

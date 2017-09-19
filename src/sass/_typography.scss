@@ -6,10 +6,24 @@ html {
 p {margin-bottom: 1.3em;}
 
 a {
+    padding: 0 3px;
     color: inherit;
     text-decoration: none;
-    border-width: 0 0 1px;
+    border-width: 0 0 2px;
     border-style: solid;
+
+    &:hover {
+        border-color: $orange;
+    }
+}
+
+.link:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 0 2px $orange;
+
+    a {
+        border-color: $orange;
+    }
 }
 
 h1, h2, h3 {

@@ -26,10 +26,22 @@ gulp.task('nunjucks', function() {
         .pipe(gulp.dest('./build'))
 })
 
+gulp.task('js', function() {
+    return gulp.src('./src/js/**/*.*')
+        .pipe(gulp.dest('./build/js'))
+})
+
+gulp.task('img', function() {
+    return gulp.src('./src/img/**/*.*')
+        .pipe(gulp.dest('./build/img'))
+})
+
 gulp.task('watch', function() {
     gulp.watch('./src/sass/**/*.scss', ['sass'])
     gulp.watch('./src/templates/**/*.njk', ['nunjucks'])
+    gulp.watch('./src/js/**/*.*', ['js'])
+    gulp.watch('./src/img/**/*.*', ['img'])
 })
 
-gulp.task('default', ['sass', 'nunjucks'])
+gulp.task('default', ['sass', 'nunjucks', 'js', 'img'])
 gulp.task('dev', ['default', 'watch'])
