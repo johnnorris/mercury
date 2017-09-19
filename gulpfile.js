@@ -1,6 +1,8 @@
 const gulp = require('gulp')
 const sass = require('gulp-sass')
 const autoprefixer = require('gulp-autoprefixer')
+const nunjucks = require('gulp-nunjucks-render')
+const htmlmin = require('gulp-htmlmin')
 const cleanCSS = require('gulp-clean-css')
 
 gulp.task('sass', function() {
@@ -13,9 +15,21 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('./build/css/'))
 })
 
-gulp.task('watch', function() {
-  gulp.watch('./src/sass/**/*.scss', ['sass'])
+gulp.task('nunjucks', function() {
+    return gulp.src('./src/templates/pages/**/*.njk')
+        // Renders template with nunjucks
+        .pipe(nunjucks({
+            path: ['./src/templates']
+        }))
+        .pipe(htmlmin({ collapseWhitespace: true }))
+        // output files in app folder
+        .pipe(gulp.dest('./build'))
 })
 
-gulp.task('default', ['sass'])
+gulp.task('watch', function() {
+    gulp.watch('./src/sass/**/*.scss', ['sass'])
+    gulp.watch('./src/templates/**/*.njk', ['nunjucks'])
+})
+
+gulp.task('default', ['sass', 'nunjucks'])
 gulp.task('dev', ['default', 'watch'])

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mercury Safety &amp; Security - {% block title %}{% endblock %}</title>
+    {% block redirect %}{% endblock %}
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="content">
+
+            <a href="index.html" class="home-link bland">
+                <span class="logo">
+                    <span class="logo-icon"></span>
+                    <span class="logo-text">Mercury</span>
+                </span>
+            </a>
+
+            <span class="nav-trigger"></span>
+
+            <nav>
+              <ul>
+                <li><a href="company.html">About Us</a></li>
+                <li><a href="products.html">Products &amp; Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        {% block content %}{% endblock %}
+
+    </main>
+
+    <footer class="small">
+
+        <span class="copy">Copyright &copy; 2017 Mercury Safety &amp; Security - <a href="privacy.html">Privacy Policy</a></span>
+        
+    </footer>
+
+    <script>
+        document.querySelector('.nav-trigger').addEventListener('click', function(event) {
+            document.querySelector('header nav').classList.toggle('show');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,3 +1,8 @@
+.home-link {
+  display: inline-block;
+  border-bottom: none;
+}
+
 .logo {
     display: table;
     font-size: 26px;
@@ -8,9 +13,11 @@
     &-text {
         float: right;
         position: relative;
+        z-index: 1;
+
         margin-top: 10px;
         margin-left: 10px;
-        z-index: 1;
+        border-bottom: solid 2px $orange;
 
         font-weight: 700;
         font-family: 'Balthazar', serif;
@@ -54,8 +61,8 @@
         }
 
         &::before {
-            top: -52px;
-            left: -52px;
+            top: -57px;
+            left: -57px;
         }
 
         &::after {
