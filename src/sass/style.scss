@@ -27,6 +27,14 @@ img, .img {
     margin-bottom: $gutter * 3;
 }
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: $white;
+    border-radius: 4px;
+    box-shadow: 0 0 4px rgba($pure-black, 0.125);
+}
+
 .content, .info  {
     margin: 0 auto;
     padding: $layout-gutter;
@@ -45,16 +53,13 @@ img, .img {
     .content, .info {
         padding: $layout-gutter/2;
     }
-
-    .info {
-        margin-left: -$layout-gutter/2;
-        margin-right: -$layout-gutter/2;
-    }
 }
 
 .info {
+    margin-left: -$layout-gutter/2;
+    margin-right: -$layout-gutter/2;
     margin-bottom: $gutter * 2;
-    background-color: $white;
+    background-color: $orange-bg;
     overflow: hidden;
 
     h2:first-of-type {
